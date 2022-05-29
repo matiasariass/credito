@@ -7,11 +7,11 @@ function credito() {
     while(!creditoAceptado) {
 
         let monto = parseInt(prompt("Ingrese el monto del credito!")) 
-        let montoPermitido = (monto < 30000);
+        let montoPermitido = (monto < 300000);
 
         while(!montoPermitido){
-            monto = parseInt(prompt("Ingreso un monto superior a 30.000, por favor ingrese uno nuevo.")) 
-            montoPermitido = (monto < 30000);
+            monto = parseInt(prompt("Ingreso un monto superior a 300.000, por favor ingrese uno nuevo.")) 
+            montoPermitido = (monto < 300000);
         }
 
         let meses = parseInt(prompt("Ingrese la cantidad de cuotas a pagar!"))
