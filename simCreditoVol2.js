@@ -67,10 +67,10 @@ function credito() {
     console.log(idReales)
   
   }
-   // POSIBLE DESCUENTO
+   // DESCUENTO DEL 15% SI EL IMPORTE ES MAYOR A 1.50
   function aplicarDescuento(interesBruto) {
     if (interesBruto > 1.50) {
-      return interesBruto * 0.85; // Descuento del 15%
+      return interesBruto * 0.85; 
     } else {
       return interesBruto;
     }
