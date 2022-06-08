@@ -2,7 +2,7 @@ function credito() {
   let username = prompt("Por favor, ingrese su nombre:")
   let paisIngresado = prompt('Introduzca su pais')
   let importeInt = calcularInteres(paisIngresado)
-  let descuentoTotal = descuentoAimplementar()
+  let descuentoTotal = descuentoAimplementar(importe)
 
   let creditoAceptado = false;
 
@@ -64,7 +64,7 @@ function calcularInteres(paisIngresado) {
   
 
 // POSIBLE DESCUENTO
-function descuentoAimplementar(){
+function aplicarDescuento(importe){
 const paisesConDescuento = paises.map((descontarPorc) => {
   if(descontarPorc.importe > 1.50) {
      descontarPorc.importe = pais.importe * 0.85 // Descuento del 15%
