@@ -62,7 +62,7 @@ function credito() {
       alert("Solo los siguientes paises estan habilitados: Argentina, Brasil, Chile, Uruguay, Venezuela")
     }
   
-    // EXTRAER DATOS DE OBJETOS - retorna el id de cada pais
+    // RETORNA EL IdREAL DE CADA PAIS
     let idReales = paises.map(pais => pais.id);
     console.log(idReales)
   
