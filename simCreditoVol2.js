@@ -10,20 +10,19 @@ function credito() {
     let montoPermitido = (monto < 2000000);
 
      while (!montoPermitido) {
-      monto = parseInt(prompt("Ingreso un monto superior a 300.000, por favor ingrese uno nuevo."))
+      monto = parseInt(prompt("Ingreso un monto menor a 2.000.000, por favor ingrese uno nuevo."))
       montoPermitido = (monto < 2000000);
     }
 
     let meses = parseInt(prompt("Ingrese la cantidad de cuotas a pagar!"))
-    let impuestoTotal = (0.90 + importeInt)
-    let resultadoTotal = (monto * impuestoTotal / 100)
-    let cuota = monto * (Math.pow(1 + impuestoTotal / 100, meses) * impuestoTotal / 100) / (Math.pow(1 + impuestoTotal / 100, meses) - 1);
-
+    let impuestoTotal = (0.30 + importeInt)
+    let resultadoTotal = (monto * impuestoTotal)
+    let resultadoPorMes = ((monto * impuestoTotal)/meses) 
 
     creditoAceptado = confirm(username + (", Usted en total pagara: " + resultadoTotal))
 
     if (creditoAceptado)
-      alert("Credito aceptado! Usted pagara: " + cuota + " por mes. ¡Gracias por confiar!");
+      alert("Credito aceptado! Usted pagara: " + resultadoPorMes + " por mes. ¡Gracias por confiar!");
   }
 }
 const paises = [{
@@ -56,6 +55,12 @@ function calcularInteres(paisIngresado) {
   } else {
     alert("Solo los siguientes paises estan habilitados: Argentina, Brasil, Chile, Uruguay, Venezuela")
   }
+    const idsOrden = paises.map(function(ids){
+    return ids.id
+})
+
+console.log(idsOrden)
+
 }
 
 credito()
@@ -63,8 +68,3 @@ credito()
 // estaria faltando un array, un metodo para recorrerlo, 
 // puede ser el metodo “map” o mediante algun bucle tipo “forEach, for, for of.. for in..” 
 // y un metodo de filtrado que seria el metodo “filter o find”
-
-
-//  let resultadoTotal = (monto * plus)
-//        let resultadoPorMes = ((monto * plus)/meses) 
-
