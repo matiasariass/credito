@@ -59,11 +59,10 @@ function credito() {
 
 
     // EXTRAER DATOS DE OBJETOS - retorna el id de cada pais
-    let idPaises = paises.map((asd) => {
-      return paises.id;
-      console.table(idPaises)
+    let idReales = paises.map (pais => pais.id);
+    console.log(idReales)
     
-});
+
 // POSIBLE DESCUENTO{
 const paisesConDescuento = paises.map(function (descuento){
   if (descuento.importe > 1.50) return descuento;
@@ -83,4 +82,3 @@ credito()
   // estaria faltando un array, un metodo para recorrerlo,
   // puede ser el metodo “map” o mediante algun bucle tipo “forEach, for, for of.. for in..”
   // y un metodo de filtrado que seria el metodo “filter o find”
-  
