@@ -18,7 +18,7 @@ function credito() {
       }
   
       let meses = parseInt(prompt("Ingrese la cantidad de cuotas a pagar!"))
-      let impuestoTotal = (0.30 + interesConDescuentoAplicado)
+      let impuestoTotal = (0.30 + interesConDescuentoAplicado) // 0.30 = impuesto de plataforma
       let resultadoTotal = (monto * impuestoTotal).toFixed(2)
       let resultadoPorMes = (resultadoTotal / meses).toFixed(2)
   
